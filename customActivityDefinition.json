@@ -1,0 +1,64 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "iconPath",
+    "iconSmall": "iconSmallPath",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "en-US": {
+      "name": "Custom Code Executor",
+      "description": "Executes a custom code snippet (SSJS/AMPscript) when a contact reaches this activity."
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [],
+      "outArguments": [],
+      "url": "https://0dcb-68-189-173-51.ngrok-free.app/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": true,
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "your-application-extension-key",
+    "save": {
+      "url": "https://0dcb-68-189-173-51.ngrok-free.app/save",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "publish": {
+      "url": "https://0dcb-68-189-173-51.ngrok-free.app/publish",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://0dcb-68-189-173-51.ngrok-free.app/validate",
+      "verb": "POST",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [
+    {
+      "label": "Configure Activity",
+      "key": "configuration_step"
+    }
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 400,
+      "width": 500,
+      "fullscreen": false
+    }
+  },
+  "outcomes": [],
+  "edit": {
+    "height": 400,
+    "width": 500
+  }
+}
